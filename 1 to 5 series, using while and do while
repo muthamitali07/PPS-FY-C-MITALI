@@ -1,0 +1,22 @@
+#include<stdio.h>
+void main()
+{
+   int count=1;
+  
+   //while loop:
+   while(count<=5)
+   {
+       printf("%d\n", count);
+       count++;
+    }
+
+    // do while loop:
+    int c=1;
+    do
+    {
+      printf("%d\n", c);
+      c++;
+    } 
+     while(c<6)
+     printf("\n\n");
+}
