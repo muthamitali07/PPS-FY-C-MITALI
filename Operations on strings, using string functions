@@ -1,0 +1,49 @@
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+void main()
+{
+    char s1[50],s2[50];
+    printf("Enter first string : \n");
+    scanf("%s",s1);
+    printf("Enter second string : \n\n\n");
+    scanf("%s",s2);
+
+    int ch;
+    printf("MENU DRIVEN PROGRAM\n");
+    printf("----------------------------------------------------------------");
+    printf("----------------------------------------------------------------");
+    printf("\n1. Calculate the length of both the strings\n2. Concatenate both the strings\n3. Copy one string into another and display it\n4. Compare the two strings");
+    printf("\n\nEnter your choice : ");
+    scanf("%d",&ch);
+
+    switch(ch)
+    {
+        case 1:
+        printf("Length of first string is = %d", strlen(s1));
+        printf("Length of second string is = %d", strlen(s2));
+        break;
+
+        case 2:
+        printf("Strings after concatenation : %s", strcat(s1,s2);
+        break;
+
+        case 3:
+        printf("Strings after being copied :%s", strcpy(s1,s2));
+        break;
+        case 4:
+        if(strcmp(s1,s2)==0)
+        {
+           printf("Both the strings are equal");
+        }
+        else
+        {
+        printf("Both the strings are NOT equal");
+        }
+        break;
+
+        default :
+        printf("Invalid choice");
+    }
+}
