@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+printf("Enter a number from 1 to 7 to know the day of the week: ");
+int day;
+scanf("%d", &day);
+switch(day)
+{
+case 1:
+printf("The Day is Monday");
+break;
+
+case 2:
+printf("The Day is Tuesday");
+break;
+
+case 3:
+printf("The Day is Wednesday");
+break;
+
+case 4:
+printf("The Day is Thursday");
+break;
+
+case 5:
+printf("The Day is Friday");
+break;
+
+case 6:
+printf("The Day is Saturday");
+break;
+
+case 7:
+printf("The Day is Sunday");
+break;
+
+default:
+ printf("Invalid choice : ");
+}
+}
