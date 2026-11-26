@@ -1,0 +1,83 @@
+
+//WAP for employee pay roll system using structures
+//Gross salary = basic + T.A + H.R.A
+//TA = 23% of basic
+//HRA = 30% of basic
+//Input name, ID, basic salary; Print name, basic salary, post, ta, hra
+//If sal>1 lpa manager, 80k to 1lpa sub manager, 60k to 80k senior clerk, below 60k junior clerk
+#include<stdio.h>
+
+struct employee
+{
+    char name[50], post[50], id[50];
+    int bas, ta, hra, gross;
+};
+
+void main()
+{
+    int i,n;
+    printf("Enter the number of employees : ");
+    scanf("%d", &n);
+
+    struct employee a[n];
+    for(i=0; i<n; i++)
+    {
+        printf("\nEnter the details of employee %d", i+1 );
+
+        printf("\nEnter the employee ID : ");
+        scanf("%s", a[i].id);
+
+        printf("Enter your name : ");
+        scanf("%s", a[i].name);
+
+        printf("Enter your basic salary : ");
+        scanf("%d", &a[i].bas);
+
+        a[i].ta = (23 * a[i].bas) / 100;
+        a[i].hra = (30 * a[i].bas) / 100;
+
+        a[i].gross = a[i].ta + a[i].hra + a[i].bas;
+
+        if (a[i].gross>=100000)
+        { a[i].post == "Manager"; }
+
+printf("Enter your name : ");
+scanf("%s", a[i].name);
+
+printf("Enter your basic salary : ");
+scanf("%d", &a[i].bas);
+
+a[i].ta = (23 * a[i].bas) / 100;
+a[i].hra = (30 * a[i].bas) / 100;
+
+a[i].gross = a[i].ta + a[i].hra + a[i].bas;
+
+if (a[i].gross>=100000)
+{ a[i].post == "Manager"; }
+
+else if (a[i].gross<100000 && a[i].gross>=80000)
+{ a[i].post == "Sub manager"; }
+
+else if (a[i].gross<80000 && a[i].gross>=60000)
+{ a[i].post == "Senior clerk" ;}
+
+else
+{ a[i].post == "Junior clerk" ; }
+}
+
+printf("\n-------------------------------- EMPLOYEE RESULTS --------------------------------\n");
+printf("ID\tNAME\tBASIC SALARY\tT.A\tH.R.A\tGROSS SALARY\tPOST\n");
+
+for(i=0; i<n; i++)
+{
+    printf("%s\t%s\t%d\t%d\t%d\t%d\t%s\n",
+    a[i].id,
+    a[i].name,
+    a[i].bas,
+    a[i].ta,
+    a[i].hra,
+    a[i].gross,
+    a[i].post);
+}
+
+}
