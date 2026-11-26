@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int a,b,choice;
+while(1)
+{
+printf("Select the mathematical operation you would like to perform :");
+printf("\n1.Addition \n2.Subtraction \n3.Multiplication \n4.Division");
+printf("\nEnter your choice : ");
+scanf("%d", &choice);
+printf("\nEnter two numbers : \n");
+scanf("%d""%d", &a,&b);
+
+switch (choice)
+{
+case 1 :
+printf("Sum of given numbers = %d", a+b);
+break;
+
+case 2 :
+printf("Differnce of the given numbers = %d", a-b);
+break;
+
+case 3 :
+printf("Product of the given numbers = %d", a*b);
+break;
+
+case 4 :
+printf("Quotient when the first numbers is divided by the second number = %d", a/b);
+break;
+
+default : 
+printf("Invalid Choice");
+
+exit (0);
+}
+}
+}
